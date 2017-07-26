@@ -1,0 +1,6 @@
+/* Настройки лейаута */
+@import "normalize.css";
+@import "fonts.css";
+
+/* Компоненты */
+@import "welcome.css";
