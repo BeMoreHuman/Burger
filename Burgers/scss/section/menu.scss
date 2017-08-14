@@ -1,0 +1,118 @@
+.menu {
+	background-image: url('../img/menu/menu_bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+}
+
+.menu__title {
+	color: #fff;
+	font-family: 'Gagalin';
+	font-size: rem(72px);
+	font-weight: 500;
+	padding: 10% 0 0 10%;
+	margin: 0;
+	//position: absolute;
+	//top: 10%;
+	//left: 10%;
+}
+
+.menu__accordeon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+}
+
+.menu__accordeon--item {
+	height: 100%;
+	&.menu__accordeon--item--active {
+
+		@include tablets {
+			.menu__accordeon--name {
+				color: $yellow;
+			}
+		}
+		
+		.menu__accordeon--desc {
+			width: rem(540px);
+
+			@include tablets {
+				width: rem(560px);
+			}
+
+			@include phones {
+				width: rem(329px);
+			}
+		}
+
+		.menu__accordeon--text {
+			display: block;
+		}
+	}
+}
+
+.menu__accordeon--link {
+	font-family: 'Gagalin';
+	font-size: rem(40px);
+	line-height: 1.6;
+	color: #fff;
+	width: rem(80px);
+	display: block;
+	height: 100%;
+	float: left;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(20,20,20,0.7);
+	}
+}
+
+.menu__accordeon--name {
+	font-size: rem(40px);
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	position: absolute;
+	transform: rotate(-90deg) translateY(-50%);
+	transform-origin: 0 0;
+	left: 50%;
+	top: 70%;
+	margin-top: rem(-20px);
+
+	@include tablets {
+		top: 95%;
+	}
+}
+
+.menu__accordeon--desc {
+	font-family: 'Ubuntu';
+	font-size: rem(14px);
+	font-weight: 300;
+	color: #fff;
+	float: left;
+	height: 100%;
+	width: 0;
+	background: rgba($dark, .93);
+	overflow: hidden;
+}
+
+.menu__accordeon--text {
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+	line-height: 1.8;
+	display: none;
+}

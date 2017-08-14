@@ -1,0 +1,147 @@
+.welcome {
+	background-image: url('../img/welcome/welcome_bg.jpg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+	position: relative;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: rem(10px);
+}
+
+.header__logo {
+	margin-right: auto;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.header__menu {
+	flex: 1;
+	text-align: right;
+	margin-right: rem(20px);
+
+	@include tablets {
+		display: none;
+	}
+}
+
+.nav {
+	margin-right: rem(16px);
+}
+
+.nav__list {
+	margin: 0;
+	padding: 0;
+}
+
+.nav__item {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	&:after {
+		display: inline-block;
+		vertical-align: middle;
+		content: ' ';
+
+		@include circle(rem(5px), #fff);
+		margin: 0 rem(15px);
+	}
+
+	&:last-child:after {
+		display: none;
+	}
+}
+
+.nav__link {
+	color: #fff;
+	font-size: rem(13px);
+	font-weight: 700;
+	line-height: 2.3;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+	transition: .5s;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.order-link {
+	min-width: rem(98px);
+	padding: rem(10px) rem(16px);
+	border-radius: rem(5px);
+	background-color: $orange;
+	color: #fff;
+	text-decoration: none;
+	font-size: rem(13px);
+	font-weight: 700;
+	line-height: 2.3;
+	text-transform: uppercase;
+	transition: .5s;
+	
+	&:hover {
+		background-color: darken($orange, 7%);
+	}
+}
+
+.welcome__content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	align-items: center;
+	padding-bottom: 15%;
+
+	@include tablets {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 0 20%;
+	}
+
+	@include phones {
+		padding: 0 10%;
+	}
+}
+
+.welcome__img, .welcome__description {
+	flex-basis: 50%;
+	display: flex;
+}
+
+.welcome__img {
+	align-items: center;
+}
+
+.welcome__description {
+	flex-direction: column;
+	justify-content: center;
+}
+
+.welcome__title {
+	color: $yellow;
+	font-family: 'Gagalin';
+	font-size: rem(72px);
+	font-weight: 500;
+	margin: 0;
+	padding-top: rem(60px);
+}
+
+.welcome__description-text {
+	color: #fff;
+	font-family: 'Lifehack';
+	font-size: rem(65px);
+	font-weight: 500;
+	line-height: 1;
+}
+

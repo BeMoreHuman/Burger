@@ -1,0 +1,150 @@
+.team {
+	background-image: url('../img/team/team_bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	position: relative;
+}
+
+.personal {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	background: rgba($dark, .93);
+	display: flex;
+	align-items: end;
+	justify-content: center;
+	padding-top: rem(90px);
+
+	@include tablets {
+		width: 100%;
+		padding-top: 15%;
+	}
+}
+
+.personal__section {
+	width: 70%;
+}
+
+.personal__title {
+	text-align: center;
+	color: $yellow;
+	font-family: 'Gagalin';
+	font-size: rem(72px);
+	font-weight: 500;
+	margin: 0;
+	margin-bottom: rem(80px);
+}
+
+.team__accordeon--link {
+	text-decoration: none;
+	font-family: 'Gagalin';
+	font-size: rem(14px);
+	color: #fff;
+	display: flex;
+	align-items: center;
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		border: rem(6px) solid transparent;
+		border-top-color: $yellow;
+		border-bottom: none;
+		margin-right: rem(10px);
+	}
+
+	@include tablets {
+		font-size: rem(25px);
+	}
+}
+
+.team__accordeon--item {
+	margin-bottom: rem(30px);
+
+	@include tablets {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: rem(20px);
+	}
+
+	&.team__accordeon--item--active {
+		.team__accordeon--desc {
+			height: auto;
+		}
+
+		.team__accordeon--link {
+			color: $yellow;
+
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.team__accordeon--desc {
+	display: flex;
+	overflow: hidden;
+	height: 0;
+	margin-top: rem(17px);
+
+	@include tablets {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: rem(20px);
+	}
+}
+
+.self__text {
+	color: #fff;
+	font-size: rem(15px);
+	margin-left: rem(50px);
+
+	@include tablets {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 0;
+	}
+}
+
+.self__occ {
+	font-weight: 900;
+
+	@include tablets {
+		display: flex;
+		margin-top: rem(20px);
+	}
+}
+
+.self__about {
+	font-weight: 300;
+	margin-top: rem(15px);
+
+	@include tablets {
+		display: flex;
+		max-width: rem(360px);
+		text-align: center;
+	}
+}
+
+.self__photo {
+	width: rem(100px);
+	height: rem(100px);
+	overflow: hidden;
+	border-radius: 50%;
+	position: relative;
+}
+
+.self__photo--pic {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+}

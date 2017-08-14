@@ -1,0 +1,18 @@
+// Config
+@import "config/variables";
+@import "config/mixins";
+
+// Layout
+@import "layout/fonts";
+@import "layout/base";
+@import "layout/adjustment";
+
+// Section
+@import "section/welcome";
+@import "section/best";
+@import "section/team";
+@import "section/menu";
+@import "section/burgers";
+@import "section/reviews";
+@import "section/delivery";
+@import "section/contacts";
