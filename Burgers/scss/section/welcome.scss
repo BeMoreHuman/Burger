@@ -140,6 +140,10 @@
 	font-weight: 500;
 	margin: 0;
 	padding-top: rem(60px);
+
+	@include phones {
+		font-size: rem(50px);
+	}
 }
 
 .welcome__description-text {

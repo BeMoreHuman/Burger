@@ -16,6 +16,10 @@
 	//position: absolute;
 	//top: 10%;
 	//left: 10%;
+
+	@include phones {
+		font-size: rem(50px);
+	}
 }
 
 .menu__accordeon {
@@ -28,30 +32,28 @@
 
 .menu__accordeon--item {
 	height: 100%;
-	&.menu__accordeon--item--active {
+	// &.menu__accordeon--item--active {
 
-		@include tablets {
-			.menu__accordeon--name {
-				color: $yellow;
-			}
-		}
-		
-		.menu__accordeon--desc {
-			width: rem(540px);
+	// 	.menu__accordeon--name {
+	// 		color: $yellow;
+	// 	}
 
-			@include tablets {
-				width: rem(560px);
-			}
+	// 	.menu__accordeon--desc {
+	// 		width: rem(540px);
 
-			@include phones {
-				width: rem(329px);
-			}
-		}
+	// 		@include tablets {
+	// 			width: calc(100vw - 3*75px);
+	// 		}
 
-		.menu__accordeon--text {
-			display: block;
-		}
-	}
+	// 		@include phones {
+	// 			width: calc(100vw - 3*65px);
+	// 		}
+	// 	}
+
+	// 	.menu__accordeon--text {
+	// 		display: block;
+	// 	}
+	// }
 }
 
 .menu__accordeon--link {
@@ -76,6 +78,10 @@
 		right: 0;
 		bottom: 0;
 		background-color: rgba(20,20,20,0.7);
+	}
+
+	@include phones {
+		font-size: rem(24px);
 	}
 }
 
@@ -115,4 +121,27 @@
 	width: 100%;
 	line-height: 1.8;
 	display: none;
+}
+
+.ui-accordion-header-active {
+	.menu__accordeon--name {
+		color: $yellow;
+	}
+}
+
+.ui-accordion-content-active {
+		width: rem(540px);
+		height: 100%;
+
+		.menu__accordeon--text {
+			display: block;
+		}
+
+		@include tablets {
+			width: calc(100vw - 3*75px);
+		}
+
+		@include phones {
+			width: calc(100vw - 3*65px);
+		}
 }

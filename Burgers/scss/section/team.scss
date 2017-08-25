@@ -36,6 +36,10 @@
 	font-weight: 500;
 	margin: 0;
 	margin-bottom: rem(80px);
+
+	@include phones {
+		font-size: rem(50px);
+	}
 }
 
 .team__accordeon--link {
@@ -71,19 +75,19 @@
 		margin-bottom: rem(20px);
 	}
 
-	&.team__accordeon--item--active {
-		.team__accordeon--desc {
-			height: auto;
-		}
+	// &.team__accordeon--item--active {
+	// 	.team__accordeon--desc {
+	// 		height: auto;
+	// 	}
 
-		.team__accordeon--link {
-			color: $yellow;
+	// 	.team__accordeon--link {
+	// 		color: $yellow;
 
-			&:before {
-				transform: rotate(180deg);
-			}
-		}
-	}
+	// 		&:before {
+	// 			transform: rotate(180deg);
+	// 		}
+	// 	}
+	// }
 }
 
 .team__accordeon--desc {
@@ -147,4 +151,20 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	height: 100%;
+}
+
+.ui-accordion-header-active {
+	color: $yellow;
+
+	&:before {
+		transform: rotate(180deg);
+	}
+}
+
+.ui-accordion-content-active {
+	height: auto;
+}
+
+.ui-state-focus {
+	outline: none;
 }
